@@ -8,9 +8,11 @@
 </head>
 <body>
   <div class="column left-column">
-    <h1>Noundry</h1>
+    <h1>Noundry 2023</h1>
     <form action="/" method="post" enctype="multipart/form-data">
+      <p>Twitter:</p>
       <input type="text" name="twitterHandle" placeholder="Twitter Handle" required value="<%= lastInput.twitterHandle || '' %>">
+      <p>Trait Name:</p>
       <input type="text" name="traitName" placeholder="Trait Name" required value="<%= lastInput.traitName || '' %>">
       <input type="file" name="image" required>
       <button type="submit">Upload Image</button>
