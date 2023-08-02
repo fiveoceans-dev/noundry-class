@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column {
+  box-sizing: border-box;
+}
+
+.left-column {
+  width: 20%;
+  padding: 20px;
+}
+
+.gallery-column {
+  width: 80%;
+  padding: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 10px;
+}
+
+.image-container {
+  text-align: left; /* Align text to the left within the container */
+}
+
+.image {
+  width: 100%;
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.gallery p {
+  margin: 5px 0;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Noundry</title>
+</head>
+<body>
+  <div class="column left-column">
+    <h1>Noundry</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+      <input type="text" name="twitterHandle" placeholder="Twitter Handle" required value="<%= lastInput.twitterHandle || '' %>">
+      <input type="text" name="traitName" placeholder="Trait Name" required value="<%= lastInput.traitName || '' %>">
+      <input type="file" name="image" required>
+      <button type="submit">Upload Image</button>
+    </form>
+  </div>
+  <div class="column gallery-column">
+    <div class="gallery">
+      <% images.forEach(function(image) { %>
+        <div class="image-container">
+          <div class="image" style="background-image: url('<%= image.url %>')"></div>
+          <p>Trait: <%= image.traitName %></p>
+          <p><a href="https://twitter.com/<%= image.twitterHandle %>" target="_blank">Twitter: <%= image.twitterHandle %></a></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>
